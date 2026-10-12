@@ -17,7 +17,6 @@ export const sites = [
     description:
       "把文本、数据格式和编码转换集中在一个入口，配合学习，随用随开。",
     tags: ["JSON", "文本处理", "编码转换"],
-    owned: true,
   },
   {
     name: "菜鸟工具",

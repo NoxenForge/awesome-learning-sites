@@ -37,12 +37,8 @@ function createCard(site) {
   card.rel = "noopener noreferrer";
   const top = element("div", "card-top");
   top.append(element("span", `site-mark ${site.tone}`, site.mark));
-  const hint = element(
-    "span",
-    site.owned ? "owned-badge" : "card-arrow",
-    site.owned ? "我维护的项目" : "↗",
-  );
-  if (!site.owned) hint.setAttribute("aria-hidden", "true");
+  const hint = element("span", "card-arrow", "↗");
+  hint.setAttribute("aria-hidden", "true");
   top.append(hint);
   const heading = element("h3", "", site.name);
   const domain = element(

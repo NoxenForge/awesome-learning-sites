@@ -285,81 +285,7 @@ h1 {
   color: #7c887f;
   letter-spacing: 2px;
 }
-.featured {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 30px 35px;
-  background: #edf2e8;
-  border: 1px solid #d9e3d1;
-  border-radius: 14px;
-}
-.featured-icon {
-  flex-shrink: 0;
-  width: 72px;
-  height: 76px;
-  border-radius: 16px;
-  background: var(--green);
-  color: #fff;
-  font:
-    54px Georgia,
-    serif;
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-.featured-icon span {
-  position: absolute;
-  right: 8px;
-  top: 5px;
-  font-size: 17px;
-  color: #c8dcae;
-}
-.featured .eyebrow {
-  color: #527049;
-  font-size: 9px;
-}
-.featured h2 {
-  margin: 8px 0;
-  font-size: 23px;
-  line-height: 1.4;
-}
-.featured h2 > span {
-  font-weight: 400;
-  font-size: 16px;
-  margin-left: 12px;
-}
-.featured p {
-  color: #5e6a5c;
-  font-size: 13px;
-  margin: 0;
-}
-.featured-copy {
-  flex: 1;
-}
-.featured-tags {
-  display: flex;
-  gap: 16px;
-  margin-top: 12px;
-  font-size: 10px;
-  color: #527049;
-}
-.primary-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  background: var(--green);
-  color: #fff;
-  padding: 12px 18px;
-  font-size: 13px;
-  border-radius: 7px;
-  white-space: nowrap;
-}
-.primary-link:hover {
-  background: #1a4d3c;
-  color: white;
-}
+
 .directory {
   padding-top: 65px;
   scroll-margin-top: 24px;
@@ -510,13 +436,7 @@ h1 {
   color: #748278;
   font-size: 21px;
 }
-.owned-badge {
-  color: var(--green);
-  font-size: 10px;
-  background: #eef4eb;
-  padding: 3px 7px;
-  border-radius: 4px;
-}
+
 .site-card h3 {
   font-size: 18px;
   font-weight: 600;
@@ -665,17 +585,7 @@ h1 {
   .site-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .featured h2 > span {
-    display: block;
-    margin: 6px 0 0;
-  }
-  .featured {
-    gap: 20px;
-  }
-  .featured-icon {
-    width: 62px;
-    height: 66px;
-  }
+
   .hero-bottom {
     gap: 18px;
   }
@@ -732,39 +642,7 @@ h1 {
   .hero-bottom p {
     font-size: 10px;
   }
-  .featured {
-    flex-wrap: wrap;
-    padding: 24px 20px;
-    gap: 16px;
-  }
-  .featured-icon {
-    width: 49px;
-    height: 55px;
-    font-size: 39px;
-  }
-  .featured-copy {
-    flex-basis: calc(100% - 70px);
-  }
-  .featured .eyebrow {
-    font-size: 8px;
-    letter-spacing: 1px;
-  }
-  .featured h2 {
-    font-size: 21px;
-  }
-  .featured h2 > span {
-    font-size: 13px;
-  }
-  .featured p {
-    font-size: 12px;
-  }
-  .featured-tags {
-    font-size: 9px;
-  }
-  .primary-link {
-    width: 100%;
-    margin-top: 6px;
-  }
+
   .directory {
     padding-top: 43px;
   }
@@ -832,9 +710,6 @@ h1 {
   }
   .filter {
     padding-inline: 9px;
-  }
-  .featured h2 > span {
-    font-size: 12px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

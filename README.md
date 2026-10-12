@@ -20,7 +20,7 @@ npm run build    # 输出静态文件到 dist/
 npm run preview  # 在 http://localhost:4101 预览构建结果
 ```
 
-把 `dist/` 部署到任意静态托管服务即可。资源使用相对路径，也适合 GitHub Pages 的仓库子路径；部署前需自行配置托管平台，目前仓库没有绑定远程地址。
+把 `dist/` 部署到任意静态托管服务即可。资源使用相对路径，也适合 GitHub Pages 的仓库子路径；部署前需自行配置托管平台。
 
 ## 项目结构
 

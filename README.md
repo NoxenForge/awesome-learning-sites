@@ -1,4 +1,56 @@
-# 学习与实践站点精选
+# 学习书签 · Learning Shelf
+
+一个可以独立运行和部署的学习站点导航项目，使用 **Vite + 原生 JavaScript + CSS**，无运行时框架依赖。
+
+支持分类筛选、站点搜索、可分享的筛选链接、移动端布局，以及 UrsaKit 专属推荐入口。当前收录 11 个站点。
+
+## 本地运行
+
+需要 Node.js 22.12+。
+
+```bash
+npm install
+npm run dev
+```
+
+打开 http://localhost:4100 。
+
+```bash
+npm run build    # 输出静态文件到 dist/
+npm run preview  # 在 http://localhost:4101 预览构建结果
+```
+
+把 `dist/` 部署到任意静态托管服务即可。资源使用相对路径，也适合 GitHub Pages 的仓库子路径；部署前需自行配置托管平台，目前仓库没有绑定远程地址。
+
+## 项目结构
+
+```text
+├── index.html                 # 首页结构、SEO 与无障碍语义
+├── src/
+│   ├── data/sites.js           # 站点清单与分类，新增站点改这里
+│   ├── main.js                # 卡片渲染、搜索、筛选与 URL 状态
+│   └── style.css              # 视觉样式与响应式布局
+├── public/favicon.svg         # 站点图标
+├── .github/ISSUE_TEMPLATE/     # 站点推荐表单
+├── vite.config.js             # 静态构建配置
+└── package.json               # 开发与构建命令
+```
+
+## 添加站点
+
+在 `src/data/sites.js` 的 `sites` 数组中添加记录，`category` 使用同文件里定义的分类 ID：
+
+```js
+{ name: '站点名称', url: 'https://example.com/', category: 'code',
+  mark: '</>', tone: 'green', description: '说明具体使用场景。',
+  tags: ['标签一', '标签二'] }
+```
+
+`tone` 可选 `green`、`amber`、`purple`、`blue`。自己的项目添加 `owned: true` 以公开推荐关系；首页推荐区的内容在 `index.html` 中维护。清单变化时，请同时更新下方 Markdown 目录。
+
+---
+
+## 学习与实践站点精选
 
 收集适合边学边练的在线站点：运行代码、验证数据、整理笔记，以及处理学习过程中遇到的图片和文档。
 
@@ -25,28 +77,28 @@
 
 ## 编程与数据实践
 
-| 站点 | 适合做什么 | 可以从这里开始 |
-| --- | --- | --- |
-| [菜鸟工具](https://c.runoob.com/) | 学习 HTML、CSS、JavaScript 时运行小例子，观察代码变化 | [HTML/CSS/JS 在线工具](https://c.runoob.com/front-end/61/) |
-| [JSON.cn](https://www.json.cn/) | 学习接口数据结构，查看 JSON 层级并检查格式 | [JSON 在线解析](https://www.json.cn/json/jsononline.html) |
-| [Transform](https://transform.tools/) | 对照格式转换结果，理解 HTML、JSX 和前端数据结构之间的关系 | [HTML → JSX](https://transform.tools/html-to-jsx) |
-| [IT Tools](https://it-tools.tech/) | 练习哈希、令牌和常见开发数据处理 | [源码与自部署说明](https://github.com/CorentinTh/it-tools) |
-| [CTFever Toolkit](https://ctfever.uniiem.com/) | 配合 CTF 入门练习，观察字符编码和古典密码的转换 | [凯撒密码](https://ctfever.uniiem.com/tools/caesar-cipher) |
-| [DevToolCafe](https://devtoolcafe.com/) | 验证正则表达式，用可视化结果辅助理解匹配规则 | [正则测试与可视化](https://devtoolcafe.com/tools/regex) |
+| 站点                                           | 适合做什么                                                | 可以从这里开始                                             |
+| ---------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------- |
+| [菜鸟工具](https://c.runoob.com/)              | 学习 HTML、CSS、JavaScript 时运行小例子，观察代码变化     | [HTML/CSS/JS 在线工具](https://c.runoob.com/front-end/61/) |
+| [JSON.cn](https://www.json.cn/)                | 学习接口数据结构，查看 JSON 层级并检查格式                | [JSON 在线解析](https://www.json.cn/json/jsononline.html)  |
+| [Transform](https://transform.tools/)          | 对照格式转换结果，理解 HTML、JSX 和前端数据结构之间的关系 | [HTML → JSX](https://transform.tools/html-to-jsx)          |
+| [IT Tools](https://it-tools.tech/)             | 练习哈希、令牌和常见开发数据处理                          | [源码与自部署说明](https://github.com/CorentinTh/it-tools) |
+| [CTFever Toolkit](https://ctfever.uniiem.com/) | 配合 CTF 入门练习，观察字符编码和古典密码的转换           | [凯撒密码](https://ctfever.uniiem.com/tools/caesar-cipher) |
+| [DevToolCafe](https://devtoolcafe.com/)        | 验证正则表达式，用可视化结果辅助理解匹配规则              | [正则测试与可视化](https://devtoolcafe.com/tools/regex)    |
 
 ## 笔记与文本整理
 
-| 站点 | 适合做什么 | 可以从这里开始 |
-| --- | --- | --- |
-| [开发者武器库](https://devtool.tech/) | 写 Markdown 笔记、整理项目经历和简历 | [Markdown 编辑器](https://markdown.devtool.tech/app) |
-| [蛙蛙工具](https://www.iamwawa.cn/) | 整理摘录和词汇列表，处理重复文本与英文大小写 | [文本去重](https://www.iamwawa.cn/quchong.html) |
+| 站点                                  | 适合做什么                                   | 可以从这里开始                                       |
+| ------------------------------------- | -------------------------------------------- | ---------------------------------------------------- |
+| [开发者武器库](https://devtool.tech/) | 写 Markdown 笔记、整理项目经历和简历         | [Markdown 编辑器](https://markdown.devtool.tech/app) |
+| [蛙蛙工具](https://www.iamwawa.cn/)   | 整理摘录和词汇列表，处理重复文本与英文大小写 | [文本去重](https://www.iamwawa.cn/quchong.html)      |
 
 ## 图片与音视频处理
 
-| 站点 | 适合做什么 | 可以从这里开始 |
-| --- | --- | --- |
-| [即时工具](https://www.67tool.com/) | 整理课程截图、压缩笔记插图，准备分享材料 | [图片压缩](https://www.67tool.com/images/imgCompress) |
-| [123apps](https://123apps.com/cn/) | 剪辑练习视频、裁剪录音，制作学习展示材料 | [在线视频编辑器](https://online-video-cutter.com/cn/video-editor) |
+| 站点                                | 适合做什么                               | 可以从这里开始                                                    |
+| ----------------------------------- | ---------------------------------------- | ----------------------------------------------------------------- |
+| [即时工具](https://www.67tool.com/) | 整理课程截图、压缩笔记插图，准备分享材料 | [图片压缩](https://www.67tool.com/images/imgCompress)             |
+| [123apps](https://123apps.com/cn/)  | 剪辑练习视频、裁剪录音，制作学习展示材料 | [在线视频编辑器](https://online-video-cutter.com/cn/video-editor) |
 
 ## 推荐一个站点
 

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#24634e" />
+    <meta
+      name="description"
+      content="学习书签：精选编程实践、笔记整理与创作工具，按使用场景发现适合你的学习配套站点。"
+    />
+    <title>学习书签 — 把好用的站点，放在手边</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#directory">跳到站点目录</a>
+    <header class="header container">
+      <a class="brand" href="./" aria-label="学习书签首页"
+        ><span class="brand-mark" aria-hidden="true">栞</span
+        ><span>学习书签<small>LEARNING SHELF</small></span></a
+      >
+      <nav aria-label="主导航">
+        <a href="#directory">浏览站点</a
+        ><a href="#about">关于收录 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">
+          <span></span> A SMALL COLLECTION, FOR CURIOUS MINDS
+        </div>
+        <h1 id="hero-title">
+          把好用的站点，<br />放在<span class="accent">手边。</span>
+        </h1>
+        <p class="hero-description">
+          学一点，动手试一点。<br />为编程实践、笔记整理和日常创作，留一份顺手的书签。
+        </p>
+        <div class="hero-bottom">
+          <a class="browse-link" href="#directory"
+            >探索这份清单 <span aria-hidden="true">↓</span></a
+          >
+          <p>
+            <strong id="total-count">11</strong> 个精选站点
+            <span>·</span> 按场景整理
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="paper paper-back">
+            <span>MAKE SOMETHING</span><b>每一次动手，<br />都算数。</b><i>↗</i>
+          </div>
+          <div class="paper paper-front">
+            <span>YOUR NEXT DISCOVERY</span>
+            <div class="art-lines"><i></i><i></i><i></i></div>
+            <b>Keep<br />learning.</b>
+            <div class="paper-footer">一份不断生长的清单 <span>✳</span></div>
+          </div>
+          <span class="art-label">LESS SEARCHING. MORE MAKING.</span>
+        </div>
+      </section>
+      <section class="featured" aria-labelledby="featured-title">
+        <div class="featured-icon" aria-hidden="true">U<span>✳</span></div>
+        <div class="featured-copy">
+          <span class="eyebrow">MADE BY ME · 我维护的项目</span>
+          <h2 id="featured-title">UrsaKit <span>学习路上的随手工具箱</span></h2>
+          <p>处理 JSON、转换编码、整理文本，把时间留给正在学习的事情。</p>
+          <div class="featured-tags">
+            <span>数据格式</span><span>文本处理</span><span>多语言</span>
+          </div>
+        </div>
+        <a
+          class="primary-link"
+          href="https://ursakit.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >打开 UrsaKit <span aria-hidden="true">↗</span
+          ><span class="sr-only">（在新标签页打开）</span></a
+        >
+      </section>
+      <section
+        id="directory"
+        class="directory"
+        aria-labelledby="directory-title"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">THE COLLECTION</span>
+            <h2 id="directory-title">找到下一件顺手的工具</h2>
+          </div>
+          <p>不追求更多，只留下有用的。</p>
+        </div>
+        <div class="toolbar">
+          <div
+            id="filters"
+            class="filters"
+            role="group"
+            aria-label="按分类筛选"
+          ></div>
+          <div class="search-wrap">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" /></svg
+            ><label class="sr-only" for="search">搜索名称、用途或标签</label
+            ><input
+              id="search"
+              type="search"
+              placeholder="搜索名称、用途或标签…"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="results-heading">
+          <p id="result-count" role="status" aria-live="polite"></p>
+          <button id="reset" class="reset" hidden>清除筛选</button>
+        </div>
+        <div id="site-grid" class="site-grid"></div>
+        <div id="empty" class="empty" hidden>
+          <h3>暂时没有匹配的站点</h3>
+          <p>换一个关键词，或者清除筛选看看全部收藏。</p>
+          <button id="empty-reset">查看全部站点</button>
+        </div>
+        <noscript
+          ><p>
+            请启用 JavaScript 以使用搜索和分类，或查看项目的
+            <a href="./README.md">完整站点清单</a>。
+          </p></noscript
+        >
+      </section>
+      <section id="about" class="about">
+        <span class="eyebrow">A NOTE ON THIS SHELF</span>
+        <div>
+          <h2>一份小清单，慢慢积累。</h2>
+          <p>
+            这里收录适合学习与实践的配套站点，写清楚用途，也保留发现的来源。首批第三方站点精选自
+            <a
+              href="https://github.com/bestxtools/awesome-toolbox-chinese"
+              target="_blank"
+              rel="noopener noreferrer"
+              >awesome-toolbox-chinese ↗</a
+            >；UrsaKit 是我自己维护的项目。
+          </p>
+          <p>
+            欢迎带着具体使用场景推荐新站点，提交方式见
+            <a href="./README.md">项目说明</a>。
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="container footer">
+      <span
+        >学习书签
+        <span class="footer-dot">/</span> 为下一次好奇，留个入口。</span
+      ><a href="#hero-title">回到顶部 ↑</a>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

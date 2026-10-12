@@ -1,0 +1,29 @@
+name: 推荐站点
+description: 分享适合学习与实践的站点
+title: "[推荐] "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: 站点名称
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 站点链接
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景与推荐理由
+      description: 说明它解决什么问题，以及你的实际使用心得。
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充信息
+      description: 是否需要登录或付费？是否是你维护的项目？
